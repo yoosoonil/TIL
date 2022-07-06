@@ -1,5 +1,4 @@
-# 🎯Fullstack 과정 TIL(Today I Learned)
-
+# 🎯Backend developer 되기 위한 TIL(Today I Learned)
 
 
 ## 🗓️일자별 배운 기록
