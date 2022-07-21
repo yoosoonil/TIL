@@ -24,12 +24,12 @@ for test_case in range (1, T + 1):          # test_case 돌리는 코드.
     
     i = 0                                   # i의 초기값
     while(True):
-        if 0 in listA:                      # listA 안에 0없으면 -> break 즉, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]되면 break
-            i += 1                          # i에 1씩 더함.
-            num = str(N*i)                  # num은 N*i(1, 2, 3, ...)이다. ex) 1295 * 1
+        if 0 in listA:                      # listA 안에 요소 0이 있으면 -> 아래 코드 진행. 
+            i += 1                          # i에 1 더함.
+            num = str(N*i)                  # num은 N*i(1, 2, 3, ...)이다. ex) 1295 * 1, 1295*2, 1295*3 ...
             for j in range(len(num)):       # 1295 -> range(4) -> [0, 1, 2, 3] -> lisA[1], listA[2], listA[9], list[5] 
-                listA[int(num[j])] += 1     # listA = [0, 1, 1, 0, 0, 1, 0, 0, 0, 1]
-        else :                              # listA 안에 0이 없으면 -> break.
-            break                            
-    print(f'{test_case} {num}')             # 번호와 num 출력
+                listA[int(num[j])] += 1     # listA = [0, 1, 1, 0, 0, 1, 0, 0, 0, 1]  -> 결국 listA의 요소들이 0이 아닐때까지 반복.
+        else :                              
+            break                           # listA 안에 0이 없으면 -> break.
+    print(f'{test_case} {num}')             # #번호와 num 출력
     
