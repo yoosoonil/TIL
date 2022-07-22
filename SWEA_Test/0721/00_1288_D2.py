@@ -22,11 +22,11 @@ for test_case in range (1, T + 1):          # test_case 돌리는 코드.
     
     listA = [0]*10                          # listA -> [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     
-    i = 0                                   # i의 초기값
+    k = 0                                   # k의 초기값 //문제 내 kN에서 k를 하나씩 늘려서 곱해야하기에 코드 설정. 
     while(True):
         if 0 in listA:                      # listA 안에 요소 0이 있으면 -> 아래 코드 진행. 
-            i += 1                          # i에 1 더함.
-            num = str(N*i)                  # num은 N*i(1, 2, 3, ...)이다. ex) 1295 * 1, 1295*2, 1295*3 ...
+            k += 1                          # k에 반복할 때마다 1 더함.
+            num = str(N*k)                  # num은 N*k(1, 2, 3, ...)이다. ex) 1295 * 1, 1295*2, 1295*3 ...
             for j in range(len(num)):       # 1295 -> range(4) -> [0, 1, 2, 3] -> lisA[1], listA[2], listA[9], list[5] 
                 listA[int(num[j])] += 1     # listA = [0, 1, 1, 0, 0, 1, 0, 0, 0, 1]  -> 결국 listA의 요소들이 0이 아닐때까지 반복.
         else :                              
