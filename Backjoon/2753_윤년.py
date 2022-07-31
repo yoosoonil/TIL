@@ -1,14 +1,6 @@
 Y = int(input())
 
-if Y % 4 == 0:
-    if not Y % 100 == 0:
-        print("1")
-    else:
-        print("0")
-elif Y % 100 == 0:
-    if not Y % 400 == 0:
-        print("0")
-    else:
-        print("1")
-elif Y % 400 == 0:
-    print("1")
+if ((Y % 4 == 0) and (Y % 100 != 0)) or ( Y % 400 == 0):    # '!='은 not이라는 뜻.
+    print('1')  # 윤년 조건식이 참인경우
+else:
+    print('0')  # 거짓인경우
